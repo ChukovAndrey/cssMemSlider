@@ -1,0 +1,2 @@
+# cssMemSlider
+rsscopes-school task
