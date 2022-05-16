@@ -1,0 +1,265 @@
+/*Обнуление*/
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	height: 100%;
+	font-family: "Arial", sans-serif;
+	color: #ffffff;
+	font-size: 15px;
+}
+
+input,
+button,
+textarea {
+	font-family: "Georgia", serif;
+	font-size: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+	background-color: inherit;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+input {
+	-webkit-appearance: none;
+}
+.main {
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	background-color: black;
+}
+.container {
+	margin: 0 auto;
+	padding: 10rem 0;
+	max-width: 80rem;
+}
+.hidden {
+	display: none;
+}
+.slider {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 50rem;
+	height: 40rem;
+}
+.slides {
+	width: 400%;
+	display: flex;
+}
+.slide {
+	border: 2px solid white;
+	display: inline-block;
+	width: 50rem;
+	height: 28.1rem;
+	transition: all 0.5s ease;
+}
+@media (max-width: 780px) {
+	.slider {
+		width: 20rem;
+	}
+	.slide {
+		width: 20rem;
+		height: 11.24rem;
+	}
+}
+.slide img{
+width: 100%;
+height: 100%;
+}
+.row {
+	display: flex;
+	flex-direction: row-reverse;
+	padding-top: 2rem;
+	justify-content: space-between;
+}
+@media (max-width: 780px) {
+	.row {
+		flex-direction: column;
+	}
+}
+.slides-text {
+	width: 5rem;
+	display: flex;
+	
+}
+.text-wrapper {
+	overflow: hidden;
+	width: 400%;
+	display: flex;
+	transition: all 0.5s ease;
+}
+.text {
+	flex-shrink: 0;
+	width: 5rem;
+	
+}
+
+.controls {
+	font-size: 0;
+}
+@media (max-width: 780px) {
+	.controls {
+			align-self: center;
+		}
+}
+
+.control {
+	display: inline-block;
+	padding: 0.5rem;
+	cursor: pointer;
+}
+
+.control > span {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	border: 2px solid blue;
+	background-color: blue;
+}
+.control:hover>span {
+	background-color: blueviolet;
+	border: 2px solid blueviolet;
+}
+#radio1:checked ~ .slides .slide1 {
+	margin-left: 0;
+}
+#radio2:checked ~.slides .slide2 {
+	margin-left: -50rem;
+}
+#radio3:checked ~.slides .slide3 {
+	margin-left: -100rem;
+}
+#radio4:checked ~.slides .slide4 {
+	margin-left: -150rem;
+}
+
+@media (max-width: 780px) {
+	#radio1:checked~.slides .slide1 {
+			margin-left: 0;
+		}
+	
+		#radio2:checked~.slides .slide2 {
+			margin-left: -20rem;
+		}
+	
+		#radio3:checked~.slides .slide3 {
+			margin-left: -40rem;
+		}
+	
+		#radio4:checked~.slides .slide4 {
+			margin-left: -60rem;
+		}
+}
+
+#radio1:checked ~ .row .text-wrapper {
+	margin-left: 0;
+}
+#radio2:checked ~.row .text-wrapper{
+	margin-left: -5rem;
+}
+
+#radio3:checked ~.row .text-wrapper{
+	margin-left: -10rem;
+}
+
+#radio4:checked ~.row .text-wrapper {
+	margin-left: -15rem;
+}
+
+#radio1:checked~.row #con1 > span{
+	background-color: transparent;
+}
+
+#radio2:checked~.row #con2>span {
+	background-color: transparent;
+}
+
+#radio3:checked~.row #con3>span {
+	background-color: transparent;
+}
+
+#radio4:checked~.row #con4>span {
+	background-color: transparent;
+}
+
+#radio1:checked:hover~.row #con1>span {
+	background-color: transparent;
+	border: 2px solid blue;
+}
+
+#radio2:checked:hover~.row #con2>span {
+	background-color: transparent;
+	border: 2px solid blue;
+}
+
+#radio3:checked:hover~.row #con3>span {
+	background-color: transparent;
+	border: 2px solid blue;
+}
+
+#radio4:checked:hover~.row #con4>span {
+	background-color: transparent;
+	border: 2px solid blue;
+}
